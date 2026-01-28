@@ -15,15 +15,47 @@ To write a program to predict the marks scored by a student using the simple lin
 
 ## Program:
 ```
-/*
+# Import required libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Load the dataset
+data = pd.read_csv("data.csv")
+
+# Independent variable (X) and Dependent variable (y)
+X = data[['Experience']]   # must be 2D
+y = data['Salary']
+
+# Create the Linear Regression model
+model = LinearRegression()
+
+# Train the model
+model.fit(X, y)
+
+# Predict values
+y_pred = model.predict(X)
+
+# Display slope and intercept
+print("Slope (m):", model.coef_[0])
+print("Intercept (c):", model.intercept_)
+
+# Plot the data and regression line
+plt.scatter(X, y)
+plt.plot(X, y_pred)
+plt.xlabel("Experience")
+plt.ylabel("Salary")
+plt.title("Simple Linear Regression")
+plt.show()
+
 Program to implement the simple linear regression model for predicting the marks scored.
-Developed by: 
-RegisterNumber:  
-*/
-```
+Developed by: Sunil kumar R
+RegisterNumber: 212225040440
+
 
 ## Output:
-![simple linear regression model for predicting the marks scored](sam.png)
+![screenshot](https://github.com/user-attachments/assets/e8e64d25-dcc2-48f4-a485-c5e17a1b84be)
+
 
 
 ## Result:
