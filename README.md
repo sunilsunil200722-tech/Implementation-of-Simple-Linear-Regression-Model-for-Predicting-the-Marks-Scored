@@ -47,7 +47,7 @@ plt.xlabel("Experience")
 plt.ylabel("Salary")
 plt.title("Simple Linear Regression")
 plt.show()
-
+```
 Program to implement the simple linear regression model for predicting the marks scored.
 Developed by: Sunil kumar R
 RegisterNumber: 212225040440
